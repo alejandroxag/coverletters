@@ -1,0 +1,61 @@
+---
+name: Alejandro
+surname: Álvarez
+position: 'Master of Information Systems Management - Business Intelligence & Data Analytics @ Carnegie Mellon University'
+# position:
+# address:
+phone: +1 412 509 7161
+email: "axa@andrew.cmu.edu"
+github: /alejandroxag
+linkedin: /alejandroxag
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+headcolor: 117c8d
+docname: 'MISM-BIDA @ CMU'
+pagenum: false
+output: vitae::awesomecv
+---
+
+    ```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+options(tinytex.verbose = TRUE)
+
+```
+
+```{r text}
+greeting <- 'Dear ###########,'
+goodbye <- 'Kind regards,'
+name <- 'Alejandro Álvarez'
+
+p1 <- 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget pharetra lacus. Suspendisse potenti. Maecenas nisl augue, dignissim pulvinar blandit eget, auctor nec neque. Nulla facilisi. Cras varius lacus vitae elit malesuada semper. Nunc rutrum pharetra consectetur. Nunc non varius eros. In lacinia, purus sed malesuada lobortis, eros lacus bibendum quam, ac lacinia augue nulla in lacus. Mauris ante nunc, egestas et nisl id, eleifend finibus mauris. Duis ac magna velit. Integer vitae lacinia ante. Ut a urna nec dui sodales feugiat. Phasellus maximus gravida risus sit amet scelerisque. Suspendisse magna orci, tempus eu tristique non, fermentum ut metus. Suspendisse ut posuere diam. Fusce et faucibus libero.'
+
+p2 <- 'Cras et dolor fringilla sapien consequat vehicula commodo a eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vulputate odio vel auctor finibus. Duis non bibendum nulla, sed pharetra mi. Nunc sit amet purus enim. Cras mi arcu, congue ac nibh aliquet, feugiat bibendum lacus. Ut ut eleifend ante.'
+
+p3 <- 'Morbi finibus orci nec arcu luctus ornare. Pellentesque porttitor, lacus semper lacinia auctor, eros ex tincidunt nunc, ac auctor risus ante et nunc. Cras id laoreet dolor, nec semper quam. Vestibulum sit amet est diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec dui nec dui ullamcorper bibendum. Morbi nibh elit, malesuada id bibendum vitae, mollis ac diam. Donec scelerisque dolor velit, ut varius est fringilla a. Suspendisse sapien risus, sollicitudin vel consequat et, rhoncus ac nisl. Etiam ex velit, placerat et rhoncus in, semper sit amet dolor. Duis a ligula ac ex bibendum accumsan. Nulla facilisi. Nam fringilla lorem libero, quis sollicitudin justo eleifend placerat. Nam pellentesque, urna sed venenatis ornare, urna lectus cursus tellus, mattis semper justo est ut nunc. Ut non luctus augue.'
+
+p4 <- 'Nam vitae facilisis ligula, sit amet molestie mauris. Proin mollis malesuada scelerisque. In lacinia lacus consequat justo tincidunt, et vulputate turpis dignissim. Aenean at nibh magna. Donec condimentum lacus nec urna interdum, in finibus purus rhoncus. Quisque mattis urna diam, et ornare mi tincidunt at. Sed elit lorem, consequat in feugiat vel, fringilla id magna. In hac habitasse platea dictumst. Vivamus vitae nulla ut risus rhoncus suscipit vitae ut dolor. Aliquam non lobortis tortor. Praesent volutpat imperdiet risus quis pretium. Proin ac tristique risus. Phasellus interdum elementum odio, sed faucibus ex pharetra in. Pellentesque sit amet ornare nibh.'
+
+p5 <- 'Mauris molestie quis purus vel lobortis. Sed at lacus erat. Pellentesque porttitor tristique dolor, nec rutrum ligula placerat id. Nulla pulvinar est ligula. Fusce efficitur varius nunc, in tempor lectus sodales sit amet. Donec rhoncus, ex vitae consequat dictum, justo leo dictum mauris, at accumsan libero mauris vitae risus. Fusce vitae mattis tortor. Integer leo neque, ullamcorper at augue a, luctus congue ex.'
+
+```
+
+
+```{r structure}
+tribble(
+    ~ sp1, ~ sp2, ~ sp3, ~ sp4, ~ Text,
+    '', '', '', '', greeting,
+    '', '', '', '', p1,
+    '', '', '', '', p2,
+    '', '', '', '', p3,
+    '', '', '', '', p4,
+    '', '', '', '', p5,
+    '', '', '', '', goodbye,
+    '', '', '', '', '',
+    '', '', '', '', '',
+    '', '', '', '', name,
+) %>% detailed_entries(sp1, sp2, sp3, sp4, Text)
+```
+
+
