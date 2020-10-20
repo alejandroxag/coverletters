@@ -1,0 +1,52 @@
+---
+name: Alejandro
+surname: Álvarez
+position: 'Master of Information Systems Management - Business Intelligence & Data Analytics @ Carnegie Mellon University'
+# position:
+# address:
+phone: +1 412 509 7161
+email: "axa@andrew.cmu.edu"
+github: /alejandroxag
+linkedin: /alejandroxag
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+headcolor: 117c8d
+docname: 'MISM-BIDA @ CMU'
+pagenum: false
+output: vitae::awesomecv
+---
+
+    ```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+options(tinytex.verbose = TRUE)
+
+```
+
+```{r text}
+greeting <- 'Dear Hiring Manager,'
+goodbye <- 'Kind regards,'
+name <- 'Alejandro Álvarez'
+
+p1 <- 'I’m applying for the position of Software Development Engineer Intern, Summer 2021, in Arlington County (Req. ID: R-111347). Enfolded within this application is my resume detailing my project and work experiences and my qualifications.'
+
+p2 <- 'Based on the job description, I find this potential opportunity of working at the Platforms team at Mastercard, both appealing and defiant. As a consultant, the projects I managed often implemented data management, statistical analysis, and software development to keep our solutions portable. Hence, this job matches my personal and professional interests, and I feel confident in generating good synergies and making valuable contributions to the team if I held such a position, given my quantitative professional and academic backgrounds.'
+
+p3 <- 'If you have a brief moment, I would appreciate talking to you to ask you about the type of projects I would be working on if hired, and please reach me if you have any questions about my resume.'
+```
+
+
+```{r structure}
+tribble(
+    ~ sp1, ~ sp2, ~ sp3, ~ sp4, ~ Text,
+    '', '', '', '', greeting,
+    '', '', '', '', p1,
+    '', '', '', '', p2,
+    '', '', '', '', p3,
+    '', '', '', '', goodbye,
+    '', '', '', '', name,
+) %>% detailed_entries(sp1, sp2, sp3, sp4, Text)
+```
+
+
