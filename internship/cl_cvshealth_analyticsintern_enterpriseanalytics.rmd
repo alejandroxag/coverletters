@@ -1,0 +1,56 @@
+---
+name: Alejandro
+surname: Álvarez
+position: 'Master of Information Systems Management - Business Intelligence & Data Analytics @ Carnegie Mellon University'
+# position:
+# address:
+phone: +1 412 509 7161
+email: "axa@andrew.cmu.edu"
+github: /alejandroxag
+linkedin: /alejandroxag
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+headcolor: 117c8d
+docname: 'MISM-BIDA @ CMU'
+pagenum: false
+output: vitae::awesomecv
+---
+
+    ```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+options(tinytex.verbose = TRUE)
+
+```
+
+```{r text}
+greeting <- 'Dear Hiring Manager,'
+goodbye <- 'Kind regards,'
+name <- 'Alejandro Álvarez'
+
+p1 <- 'This is Alejandro Alvarez, a graduate student at Carnegie Mellon University, currently pursuing a master’s degree in Information Systems. I’m applying for the Analytics Intern - Enterprise Analytics position for Graduate Students. I’m deeply interested in this opportunity since it summarizes my academic and professional interests, as you can tell by the degree I’m pursuing, with my prior experience as a consultant, during which  I managed several projects for the pharmaceutical and retail industries.'
+
+p2 <- 'During the last six years, I had the opportunity to rebuild the Economic Consulting Team I led at the consulting firm I worked at, shifting the team’s orientation to a technical and data-driven one. When I joined the Economic Consulting Team of my firm, the common practice was to use MO Excel as our primary tool to conduct every step of our workflow, from the data-cleansing to the analytical stages. Six years later, and four since I took the team’s lead, we conducted larger-scale projects involving databases design, supervised and non-supervised methods for statistical analysis, the elaboration of reproducible documents, and interactive dashboards, and the systematic implementation of data processing, cleansing, and validation processes. All these improvements were possible thanks to the technological migration I carried out to establish the R Programming language as our primary analytical tool and Git as our main Version Control System. Moreover, a significant number of such projects were carried out for clients in the pharmaceutical, retail, and manufacturing industries.'
+
+p3 <- 'Further detail of my work experience and skills are listed in my resume. Still, I’ve mentioned these details to convince you that I have most of the qualifications you’re looking for, according to the job description. I have the tools and theoretical knowledge, exposure to working with the health industry, solid experience in communicating technical results to non-technical audiences, team-work skills, and deep curiosity and self-motivation to learn continuously.'
+
+p4 <- 'Without any further, I thank you very much for your time and consideration of this application, and please don’t hesitate to reach me. I look forward to hearing from you and, hopefully, to be part of a company like CVS Health, which enhances the health-services proximity to people by making data-driven decisions.'
+
+```
+
+
+```{r structure}
+tribble(
+    ~ sp1, ~ sp2, ~ sp3, ~ sp4, ~ Text,
+    '', '', '', '', greeting,
+    '', '', '', '', p1,
+    '', '', '', '', p2,
+    '', '', '', '', p3,
+    '', '', '', '', p4,
+    '', '', '', '', goodbye,
+    '', '', '', '', name,
+) %>% detailed_entries(sp1, sp2, sp3, sp4, Text)
+```
+
+
