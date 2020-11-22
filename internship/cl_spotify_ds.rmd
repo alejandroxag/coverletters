@@ -1,0 +1,65 @@
+---
+name: Alejandro
+surname: Álvarez
+position: 'Master of Information Systems Management - Business Intelligence & Data Analytics @ Carnegie Mellon University'
+# position:
+# address:
+phone: +1 412 509 7161
+email: "axa@andrew.cmu.edu"
+github: /alejandroxag
+linkedin: /alejandroxag
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+headcolor: 117c8d
+docname: 'MISM-BIDA @ CMU'
+pagenum: false
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+options(tinytex.verbose = TRUE)
+
+```
+
+```{r text}
+greeting <- 'Dear Hiring Manager,'
+goodbye <- 'Best,'
+name <- 'Alejandro Álvarez'
+
+p1 <- "I'm Alejandro, a big fan of my Discover Weekly playlist. I don't have a favorite song, but I remember that Seasons in the Sun (Terry Jacks) and Crimson and Clover (Tommy James & The Shondells) were about the first ones that got under my skin. I almost every day send a text or make a Git commit. But listening to Spotify, I do it every day. Thus, there's probably no place in which I would work with more passion than at Spotify. I genuinely want to join Spotify’s band."
+
+p2 <- "But music is certainly not the only reason I want to work as a Data Scientist Intern at Spotify. During my six years working as a consultant, all the projects I managed focused on gathering, processing, and analyzing data to drive decisions. One of the last ones was assessing the impact of a student loan program on the beneficiaries' income. I had the chance to design a survey, process and analyze the data, and conduct a causal-effect analysis. The project was very successful, as the board managed to keep the sponsorship from the Government’s Science Council."
+
+p3 <- "As a consultant, it was vital to convey results in the most acknowledgeable fashion besides processing and analyzing data. One particularly complex project I faced was communicating the impact of different fee schemas to license the radio spectrum’s use to a federal judge. I designed an R Shiny dashboard to graphically show how the current fee schema was unfair for potential incoming firms to the market."
+
+p4 <- "The great majority of the projects I managed involved close collaboration with different internal and external teams, so I’m used to transversal collaboration. And as a band member, I can share that our primary analytical tool was MS Excel when I joined. When I left, we conducted all our data analysis using R; we produced most of our documents using R Markdown, and our version control system was Git. That change I started, proposed it and implemented it myself. I learned myself and taught my mates. And to be honest, it was just for the sake of learning, moving forward as a team, and having a good reason to spend time with them."
+
+p5 <- "Given the job description and my professional experience, my experience as a graduate student of Information Systems and Data Analytics, and my academic background in applied mathematics and statistical analysis from my bachelor's degrees, I believe I have something valuable to offer to Spotify as a Data Scientist Intern. Besides, of course, of being an intense music lover."
+
+p6 <- "Further detail about my technical skills is summarized in my resume. I genuinely hope to hear from you, so please don't hesitate to reach me either by phone or email. I appreciate a great deal your time to read this application."
+
+
+```
+
+
+```{r structure}
+tribble(
+    ~ sp1, ~ sp2, ~ sp3, ~ sp4, ~ Text,
+    '', '', '', '', greeting,
+    '', '', '', '', p1,
+    '', '', '', '', p2,
+    '', '', '', '', p3,
+    '', '', '', '', p4,
+    '', '', '', '', p5,
+    '', '', '', '', p6,
+    '', '', '', '', goodbye,
+    '', '', '', '', '',
+    '', '', '', '', '',
+    '', '', '', '', name,
+) %>% detailed_entries(sp1, sp2, sp3, sp4, Text)
+```
+
+

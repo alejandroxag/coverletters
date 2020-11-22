@@ -1,0 +1,57 @@
+---
+name: Alejandro
+surname: Álvarez
+position: 'Master of Information Systems Management - Business Intelligence & Data Analytics @ Carnegie Mellon University'
+# position:
+# address:
+phone: +1 412 509 7161
+email: "axa@andrew.cmu.edu"
+github: /alejandroxag
+linkedin: /alejandroxag
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+headcolor: 117c8d
+docname: 'MISM-BIDA @ CMU'
+pagenum: false
+output: vitae::awesomecv
+---
+
+    ```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+options(tinytex.verbose = TRUE)
+
+```
+
+```{r text}
+greeting <- 'Dear Hiring Manager,'
+goodbye <- 'Kind regards,'
+name <- 'Alejandro Álvarez'
+
+p1 <- 'I am Alejandro Alvarez, a graduate student at Carnegie Mellon University, currently pursuing a master\'s degree in Information Systems. I\'m applying for the Digital Data Analyst, Intern position. The job description mentions that the role is focused on data-collection tasks to create or identify audiences to target. That aligns a great deal with my academic and professional interests and experience. As a consultant, I spent many years drawing conclusions from raw data interpreted in its context, targeting very different audiences, from companies\' board members to government stakeholders. This step I\'m taking now by pursuing a degree in Information Systems intends to get better and more technical skills \' set to complement that previous experience and enter the field of Analytics. Thus, the opportunity of doing precisely that at Dropbox is very compelling to me.'
+
+p2 <- 'As I began my consulting career, I contributed to developing different projects involving Analytics\' workflow stages. A particularly successful one was a study to measure the relation between the prevalence of overweight, obesity, and diabetes within certain groups of the Mexican population and their consumption of baked goods. I was in charge of the data gathering, cleansing, and validation processes in the early stages. Later, I got the opportunity to design statistical models to assess the core problem of the project. Our client well-received our findings, as different stakeholders also validated them within the industry and academic community. Such results were also an essential part of our client\'s lobbying strategy to mitigate an increase in this type of goods\' taxation rate.'
+
+p3 <- 'As such contributions to my team\'s projects continued, I was trusted by my team\'s partners to become the Senior Associate of the Economic Consulting Team at the firm. The last project I had the opportunity to lead was to measure the impact of a student\'s loan program in Mexico. In particular, we had the chance to carry out all the project stages, from the data generation process to the statistical analysis. In particular, I designed an online survey among the program\'s beneficiaries to gather information regarding their academic backgrounds and career outcomes. Besides the processes related to data cleaning and sample stratification, which I led, I conducted a statistical analysis to evaluate the causal impact of the program. Our findings were beyond pertinent since we showed that the targeted groups, such as women or low-income students, were the groups that were taking the most out of the program. The project\'s overall result was outstanding, as the foundation in charge of it managed to renew its collaboration agreement with the Mexican government, alluding to the results we generated.'
+
+p4 <- 'After six years of continuous learning at my job as a consultant, I decided to enroll in the Information Systems and Management master\'s program at Carnegie Mellon University to formalize all the experiences and knowledge I got autodidact. A natural next step that would enrich this fantastic experience I am living at CMU would be to collaborate as an Analytics Intern at Dropbox. I hope you\'ll find as a good fit for the company the combination of my academic background, both as a mathematician and as an information system\'s graduate student, and my professional experience working as a consultant in economic matters.'
+
+p5 <- 'Without any further, I thank you very much for your time and consideration of this application. I look forward to hearing from you and, hopefully, to be part of a company that provides services intended to make life easier.'
+
+```
+
+
+```{r structure}
+tribble(
+    ~ sp1, ~ sp2, ~ sp3, ~ sp4, ~ Text,
+    '', '', '', '', greeting,
+    '', '', '', '', p1,
+    '', '', '', '', p2,
+    '', '', '', '', p3,
+    '', '', '', '', p4,
+    '', '', '', '', p5,
+    '', '', '', '', goodbye,
+    '', '', '', '', name,
+) %>% detailed_entries(sp1, sp2, sp3, sp4, Text)
+```
